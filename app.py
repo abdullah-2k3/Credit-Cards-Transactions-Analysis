@@ -160,7 +160,7 @@ with tab_overview:
     st.subheader("Hourly Average Spend")
     st.plotly_chart(vz.plot_avg_spend_by_hour(df_work), use_container_width=True)
     st.subheader("Hourly Trends: Normal vs Fraud")
-    st.plotly_chart(vz.plot_hourly_trends_normal_and_fraud(df_work), use_container_width=True)
+    st.plotly_chart(vz.plot_hourly_trends_normal_and_fraud(df_work), use_container_width=True, key="overview_hourly_trends")
 
 # =========================
 # DEMOGRAPHICS & AGE TAB
@@ -219,7 +219,7 @@ with tab_time:
     st.plotly_chart(vz.plot_fraud_rate_heatmap_weekday_hour(df_work, color="Purples"), use_container_width=True)
 
     st.subheader("Hourly trends (normal vs fraud)")
-    st.plotly_chart(vz.plot_hourly_trends_normal_and_fraud(df_work, color="Purples"), use_container_width=True)
+    st.plotly_chart(vz.plot_hourly_trends_normal_and_fraud(df_work, color="Purples"), use_container_width=True, key="time_hourly_trends")
 
 
 # =========================
